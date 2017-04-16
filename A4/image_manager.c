@@ -37,6 +37,7 @@ FILE *output;
 // time of modification
 // https://www.tutorialspoint.com/c_standard_library/c_function_localtime.htm
 struct tm* modification_time;
+struct timeval time_val;
 // represent the time in YY MM DD HH MM SS format
 char time_output[512];
 int running = 0;
@@ -753,7 +754,7 @@ void *splitthreads(const char* path) {
     char output_log[512];
     strcpy(output_log, out_dir);
     strcat(output_log, "/output.log");
-    output = fopen(output_log, "w");
+    output = fopen(output_log, "a");
     if (NULL == output)
     {
       printf("Faile to create output.log\n");
@@ -782,19 +783,115 @@ void *splitthreads(const char* path) {
     char html_pwd[512];
     strcpy(html_pwd, out_dir);
     strcat(html_pwd, "/catalog.html");
-  
+
     html = fopen(html_pwd, "w");
     if (NULL == html)
     {
-      fprintf(html, "Failed to open html file\n");
+      fprintf(output, "Failed to open html file\n");
       exit(1);
     }
-    fprintf(html, "html is created\n");
+    fprintf(catalog, "html is created\n");
 
     //html = fopen(html_pwd, "w");
     printf("html is created\n");
     fprintf(html, "<html><head><title>Image Manager BMP</title></head><body>\n");
 
+    // set up handler for SIGALRM
+	  if (setupinterrupt() == -1) {
+		  perror("Failed to set up handler for SIGALRM");
+		  return 1;
+	  }
+	  // set up timer
+	  if (setupitimer() == -1) {
+		  perror("Failed to set up the ITIMER_REAL interval timer");
+		  return 1;
+	  }
 
+    // creating mutex locks
+	 fprintf(output, "========= Mutex Init =========\n\n");
+	 if (0 != pthread_mutex_init(&html_lock, NULL))
+	 {
+		 printf("mutex init failed\n");
+		 exit(1);
+	 }
+	 fprintf(output, "html_lock created\n");
+	 if (0 != pthread_mutex_init(&catalog_lock, NULL))
+	 {
+		 printf("mutex init failed\n");
+		 exit(1);
+	 }
+	 fprintf(output, "cata_lock created\n");
+	 if (0 != pthread_mutex_init(&outlog_lock, NULL))
+	 {
+		 printf("mutex init failed\n");
+		 exit(1);
+	 }
+	 fprintf(output, "out_lock created\n\n");
+
+   // set to running
+	running = 1;
+
+	pthread_t thread_1;
+
+	dir_count ++;
+	thread_count ++;
+
+	if (0 == strcmp(argv[1], "v1")) {
+		fprintf(output, "============ Running v1 ============\n\n");
+		pthread_create(&thread_1, NULL, (void *) v1_threads, (void *) input_dir);
+	} else if (0 == strcmp(argv[1], "v2")) {
+		fprintf(output, "============ Running v2 ============\n\n");
+		pthread_create(&thread_1, NULL, (void *) splitthreads, (void *) input_dir);
+	} else {
+    fprintf(output, "============ Running v3 ============\n\n");
+    pthread_create(&thread_1, NULL, (void *) v3_threads, (void *) input_dir);
+  }
+
+  pthread_join(thread_1, NULL);
+	running = 0;
+
+  // get human readable time for logging
+	gettimeofday(&time_val,NULL);
+	modification_time = localtime (&time_val.tv_sec);
+	strftime (time_output, sizeof (time_output), "%Y %b %d %Z %H:%M:%S", modification_time);
+
+	// writing catalog.log
+	fprintf(catalog, "\nProgramme initiation: %s\n\n", time_output);
+
+	fprintf(catalog, "Number of jpg files = %d\n", jpg_count);
+	fprintf(catalog, "Number of png files = %d\n", png_count);
+	fprintf(catalog, "Number of bmp files = %d\n", bmp_count);
+	fprintf(catalog, "Number of gif files = %d\n", gif_count);
+
+	fprintf(catalog, "\nNumber of directories = %d\n", dir_count);
+
+	fprintf(catalog, "Total number of valid image files = %d", jpg_count + png_count + bmp_count + gif_count);
+
+	fprintf(catalog, "\nTotal time of excecution = %d ms\n", time_output);
+
+	fprintf(catalog, "-----------------------------------------------------\n");
+	fprintf(catalog, "Total number of threads created: %d\n", thread_count);
+	if (0 == strcmp(argv[1], "v1"))
+	{
+		fprintf(catalog, "\nEnd of Log for variant 1\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n");
+	}
+	else
+	{
+		fprintf(catalog, "\nEnd of Log for variant 2\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n");
+	}
+
+	// destroy mutex
+	pthread_mutex_destroy(&html_lock);
+	pthread_mutex_destroy(&catalog_lock);
+	pthread_mutex_destroy(&outlog_lock);
+
+	fprintf(html, "</body></html>");
+	fclose(html);
+	fprintf(output, "\nhtml generated\n");
+	fclose(catalog);
+	fprintf(output, "\ncatalog generated\n");
+	fprintf(output, "\nProgram finished with no Error.\n");
+	fclose(output);
+	exit(0);
   }
 /*******************************************************************************/
