@@ -731,16 +731,22 @@ void *splitthreads(const char* path) {
 			perror("Failed to set up the ITIMER_REAL interval timer");
 			return 1;
 		}
-
+/*华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线
+                              create files and directory 
+华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线*/
     // Create output directory
     char *cur_dir = getcwd(NULL, 0);
+    // printf("%s\n", cur_dir);
+    // out_dir is the output directory
     char out_dir[512];
     strcpy(out_dir, cur_dir);
     strcat(out_dir, "/");
     strcat(out_dir, argv[3]);
     while (out_dir[strlen(out_dir)-1] == '/') {
-      out_dir[strlen(out_dir)-1] = 0;
+      out_dir[strlen(out_dir)-1] = '\0';
     }
+    // printf("%s\n",out_dir );
+
     create_output_directory(argv[3]);
 
     // Create output log which is used for debuging
@@ -755,21 +761,39 @@ void *splitthreads(const char* path) {
     }
     fprintf(output, "-------------------Varient_options: %s, Input_dir: %s, Output_dir: %s -------------------\n", argv[1], argv[2], argv[3]);
     fprintf(output, "Output.log is created.\n");
+    // printf( "Output.log is created.\n");
 
     // Create catalog.html
-    char catalog_html[512];
-    strcpy(catalog_html, out_dir);
-    strcat(catalog_html, "/catalog.log");
-    catalog = fopen(catalog_html, "a");
+    char catalog_log_pwd[512];
+    strcpy(catalog_log_pwd, out_dir);
+    strcat(catalog_log_pwd, "/catalog.log");
+    catalog = fopen(catalog_log_pwd, "a");
     if (NULL == catalog)
     {
       fprintf(output, "Failed to open catalog.log\n");
       exit(1);
     }
     fprintf(output, "Catalog.log is created\n");
+    printf("Catalog.log is created\n");
 
-    // Start to write on html
+    //
+    // Start to write on html file
+
+    char html_pwd[512];
+    strcpy(html_pwd, out_dir);
+    strcat(html_pwd, "/catalog.html");
+    html = fopen(catalog_log_pwd, "w");
+    if (NULL == html)
+    {
+      fprintf(output, "Failed to open html file\n");
+      exit(1);
+    }
+    fprintf(output, "html is created\n");
+
+    //html = fopen(html_pwd, "w");
+    printf("html is created\n");
     fprintf(html, "<html><head><title>Image Manager BMP</title></head><body>\n");
+
 
   }
 /*******************************************************************************/
