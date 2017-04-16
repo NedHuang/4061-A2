@@ -292,11 +292,14 @@ void *v3_threads(const char* dir_path){
 	struct dirent * entry;
   d = opendir(dir_path);
   while ((entry = readdir(d)) != NULL) {
-    if (entry->d_type == DT_DIR) { /* If the entry is a directory */
+    if( strcmp(entry->d_name, ".." ) == 0 || strcmp(entry->d_name, "." ) == 0 ){
+      continue;
+    } else if (entry->d_type == DT_DIR) { /* If the entry is a directory */
       sub_dir_count ++;
     }
   }
   closedir(d);
+  printf("Sub dir count: %d\n", sub_dir_count);
 
   // create a list for all sub directories;
   const char *sub_dir_list[sub_dir_count][512];
@@ -314,20 +317,23 @@ void *v3_threads(const char* dir_path){
     if( strcmp(dir_path_dirent->d_name, ".." ) == 0 || strcmp(dir_path_dirent->d_name, "." ) == 0 ){
       continue;
     } else {
-      if (S_ISDIR(file_stat.st_mode)) {
+      if (dir_path_dirent->d_type == DT_DIR) {
         // sub_dir_list[count] = (char *) malloc(1024);
         strcpy(sub_dir_list[count], dir_path);
         strcat(sub_dir_list[count], "/");
         strcat(sub_dir_list[count], dir_path_dirent->d_name);
+        printf("sub_dir_list[%i]: %s\n", count, sub_dir_list[count]);
         count ++;
       }
     }
   }
-
+  closedir(current_dir);
+  current_dir = opendir(dir_path);
   while( NULL != current_dir && NULL != (dir_path_dirent = readdir(current_dir))) {
     if( strcmp(dir_path_dirent->d_name, ".." ) == 0 || strcmp(dir_path_dirent->d_name, "." ) == 0 ){
       continue;
     } else {
+
 			char filename[512];
       strcpy(filename, dir_path);
       strcat(filename, "/");
@@ -346,7 +352,7 @@ void *v3_threads(const char* dir_path){
             jpg_count ++;
             pthread_mutex_lock(&html_lock);
             fprintf(html, "<a href=\"%s\">\n<img src=\"%s\" width=100 height =100></img></a><p align= \"left\">", filename, filename);
-              pthread_mutex_unlock(&html_lock);
+            pthread_mutex_unlock(&html_lock);
             // get the thread id
             pthread_t thread_id = pthread_self();
             // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
@@ -355,6 +361,7 @@ void *v3_threads(const char* dir_path){
             // char time_output[512];
             strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
             // write infos about the img into the html.
+            pthread_mutex_lock(&html_lock);
             fprintf(html, " FileID: %llu FileName: %s FileType: jpg Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
             pthread_mutex_unlock(&html_lock);
           } else if(strcmp(get_extension(filename), "gif") == 0) {
@@ -364,7 +371,7 @@ void *v3_threads(const char* dir_path){
             gif_count ++;
             pthread_mutex_lock(&html_lock);
             fprintf("html, <a href=\"%s\">\n<img src=\"%s\" width=100 height =100></img></a><p align= \"left\">", filename, filename);
-              pthread_mutex_unlock(&html_lock);
+            pthread_mutex_unlock(&html_lock);
             // get the thread id
             pthread_t thread_id = pthread_self();
             // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
@@ -373,6 +380,7 @@ void *v3_threads(const char* dir_path){
             // char time_output[512];
             strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
             // write infos about the img into the html.
+            pthread_mutex_lock(&html_lock);
             fprintf(html, " FileID: %llu FileName: %s FileType: gif Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
             pthread_mutex_unlock(&html_lock);
           }
@@ -392,6 +400,7 @@ void *v3_threads(const char* dir_path){
               // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
+              pthread_mutex_lock(&html_lock);
               fprintf(html, " FileID: %llu FileName: %s FileType: bmp Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
               pthread_mutex_unlock(&html_lock);
 						} else if (strcmp(get_extension(filename), "png") == 0) {
@@ -410,32 +419,34 @@ void *v3_threads(const char* dir_path){
                 // char time_output[512];
                 strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
                 // write infos about the img into the html.
+                pthread_mutex_lock(&html_lock);
                 fprintf(html, " FileID: %llu FileName: %s FileType: png Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
                 pthread_mutex_unlock(&html_lock);
               }
             }
         }
     }
-}
-
+  }
+  closedir(current_dir);
+  pthread_t new_thread[sub_dir_count];
     for (int i = 0; i < sub_dir_count; i++){
-      pthread_t new_thread;
       //  suspend execution of the calling thread (this one) until the target thread terminates
-      pthread_create(&new_thread, NULL, (void *) & v3_threads, (void *) sub_dir_list[i]);
-
-      pthread_join(new_thread, NULL);
+      // pthread_join(new_thread[sub_dir_count], NULL);
       pthread_mutex_lock(&outlog_lock);
       fprintf(output, "Directory %s found \n\t in %s\n", sub_dir_list[i], dir_path);
       pthread_mutex_unlock(&outlog_lock);
       thread_count++;
       // start a new thread
       // int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
+      pthread_create(&new_thread[sub_dir_count], NULL, (void *) & v3_threads, (void *) sub_dir_list[i]);
+      printf("current thread dir: %s\n", sub_dir_list[i]);
       dir_count++;
-      pthread_join(new_thread, NULL);
     }
-  }
-
-
+    for (int i = 0; i < sub_dir_count; i++){
+      pthread_join(new_thread[sub_dir_count], NULL);
+    }
+  pthread_exit(0);
+}
 
   // function to check images, for jpg, gif, png, bmp and directory
 void *jpg_file_check(const char* dir_path) {
@@ -812,9 +823,7 @@ void *splitthreads(const char* path) {
       fprintf(output, "Failed to open html file\n");
       exit(1);
     }
-    fprintf(catalog, "html is created\n");
 
-    //html = fopen(html_pwd, "w");
     printf("html is created\n");
     fprintf(html, "<html><head><title>Image Manager BMP</title></head><body>\n");
 
