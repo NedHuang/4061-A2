@@ -38,7 +38,9 @@ FILE *output;
 // https://www.tutorialspoint.com/c_standard_library/c_function_localtime.htm
 struct tm* modification_time;
 // represent the time in YY MM DD HH MM SS format
-char time_output[1024];
+char time_output[512];
+int running = 0;
+int time_counter = 0;
 
 // mutex for catalog.html
 pthread_mutex_t html_lock;
@@ -87,8 +89,37 @@ void create_output_directory(const char *dirName) {
   }
   closedir(odir);
 }
-// function for v1
 
+
+// handle the signal
+static void signal_handle(int s) {
+	if (running)
+	{
+		time_counter += 1;
+		pthread_mutex_lock(&catalog_lock);
+		fprintf(c_log, "Time \t%d ms\t#dirs\t%d\t#files\t%d\n", time_counter, dir_count, jpg_count + bmp_count + png_count + gif_count);
+		pthread_mutex_unlock(&cata_lock);
+	}
+}
+
+//  SIGALRM
+static int setupinterrupt(void) {
+	struct sigaction action;
+	act.sa_handler = signal_handle;
+	act.sa_flags = 0;
+	return (sigemptyset(&action.sa_mask) || sigaction(SIGALRM, &action, NULL));
+}
+//set up TIMER_REAL ( 1 ms interval )
+static int setitimer(void) {
+	struct itimerval value;
+	value.it_interval.tv_sec = 0;
+	value.it_interval.tv_usec = 1000;
+	value.it_value = value.it_interval;
+	return (setitimer(ITIMER_REAL, &value, NULL));
+}
+
+
+// function for v1
 void *v1_threads(const char* dir_path) {
   struct stat file_stat;
   struct dirent *dir_path_dirent;
@@ -109,7 +140,7 @@ void *v1_threads(const char* dir_path) {
       // int dir_length = strlen(dir_path);
       // int entry_name_length = strlen(dir_path_dirent->d_name);
       // int filename_length = dir_length + entry_name_length + 2;
-      char filename[1024];
+      char filename[512];
       strcpy(filename, dir_path);
       strcat(filename, "/");
       strcat(filename, dir_path_dirent->d_name);
@@ -148,7 +179,7 @@ void *v1_threads(const char* dir_path) {
               // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
               modification_time = localtime(&file_stat.st_mtime);
               // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-              // char time_output[1024];
+              // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: jpg Size: %lld TimeofModification: \
@@ -169,7 +200,7 @@ void *v1_threads(const char* dir_path) {
               // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
               modification_time = localtime(&file_stat.st_mtime);
               // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-              // char time_output[1024];
+              // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: gif Size: %lld TimeofModification: \
@@ -190,7 +221,7 @@ void *v1_threads(const char* dir_path) {
               // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
               modification_time = localtime(&file_stat.st_mtime);
               // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-              // char time_output[1024];
+              // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: bmp Size: %lld TimeofModification: \
@@ -211,7 +242,7 @@ void *v1_threads(const char* dir_path) {
               // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
               modification_time = localtime(&file_stat.st_mtime);
               // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-              // char time_output[1024];
+              // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: png Size: %lld TimeofModification: \
@@ -295,7 +326,7 @@ void *v3_threads(const char* dir_path){
             // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
             modification_time = localtime(&file_stat.st_mtime);
             // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-            // char time_output[1024];
+            // char time_output[512];
             strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
             // write infos about the img into the html.
             fprintf(html, " FileID: %llu FileName: %s FileType: jpg Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, dir_path_dirent->d_name, s.st_size, time_output, id);
@@ -313,7 +344,7 @@ void *v3_threads(const char* dir_path){
             // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
             modification_time = localtime(&file_stat.st_mtime);
             // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-            // char time_output[1024];
+            // char time_output[512];
             strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
             // write infos about the img into the html.
             fprintf(html, " FileID: %llu FileName: %s FileType: gif Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, dir_path_dirent->d_name, s.st_size, time_output, id);
@@ -332,7 +363,7 @@ void *v3_threads(const char* dir_path){
               // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
               modification_time = localtime(&file_stat.st_mtime);
               // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-              // char time_output[1024];
+              // char time_output[512];
               strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: bmp Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, dir_path_dirent->d_name, s.st_size, time_output, id);
@@ -350,7 +381,7 @@ void *v3_threads(const char* dir_path){
                 // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
                 modification_time = localtime(&file_stat.st_mtime);
                 // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
-                // char time_output[1024];
+                // char time_output[512];
                 strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
                 // write infos about the img into the html.
                 fprintf(html, " FileID: %llu FileName: %s FileType: png Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, dir_path_dirent->d_name, s.st_size, time_output, id);
@@ -397,7 +428,7 @@ void *jpg_file_check(const char* dir_path) {
 	    {
 	      continue;
 	    }
-	    char filename[1024];
+	    char filename[512];
 	    strcpy(filename, dir_path);
 	    strcat(filename, "/");
 	    strcat(filename, dir_path_dirent->d_name);
@@ -446,7 +477,7 @@ void *gif_file_check(const char* dir_path) {
 		    {
 		      continue;
 		    }
-		    char filename[1024];
+		    char filename[512];
 		    strcpy(filename, dir_path);
 		    strcat(filename, "/");
 		    strcat(filename, dir_path_dirent->d_name);
@@ -492,7 +523,7 @@ void *png_file_check(const char* dir_path) {
 	pthread_mutex_unlock(&outlog_lock);
 	while (NULL != current && NULL != (dir_path_dirent = readdir(current_dir))) {
 		if (0 == strcmp(dir_path_dirent->d_name, ".") || 0 == strcmp(dir_path_dirent->d_name, "..")) { continue; }
-		char filename[1024];
+		char filename[512];
 		strcpy(filename, dir_path);
 		strcat(filename, "/");
 		strcat(filename, dir_path_dirent->d_name);
@@ -538,7 +569,7 @@ void *bmp_file_check(const char* dir_path) {
 	pthread_mutex_unlock(&outlog_lock);
 	while (NULL != current && NULL != (dir_path_dirent = readdir(current_dir))) {
 		if (0 == strcmp(dir_path_dirent->d_name, ".") || 0 == strcmp(dir_path_dirent->d_name, "..")) { continue; }
-		char filename[1024];
+		char filename[512];
 		strcpy(filename, dir_path);
 		strcat(filename, "/");
 		strcat(filename, dir_path_dirent->d_name);
@@ -592,7 +623,7 @@ void *bmp_file_check(const char* dir_path) {
 				{
 					continue;
 				}
-				char filename[1024];
+				char filename[512];
 				strcpy(filename, dir_path);
 				strcat(filename, "/");
 				strcat(filename, dir_path_dirent->d_name);
@@ -641,6 +672,31 @@ void *bmp_file_check(const char* dir_path) {
 			pthread_mutex_unlock(&outlog_lock);
 			pthread_exit(0);
 		}
+// split threads to 5 for a directory
+void *splitthreads(const char* path) {
+			// create 5 threads
+			pthread_t dir_thread;
+			pthread_t jpg_thread;
+			pthread_t png_thread;
+			pthread_t bmp_thread;
+			pthread_t gif_thread;
+
+			thread_count += 5;
+
+			pthread_create(&dir_thread, NULL, (void *) &dir_check, (void *) path);
+			pthread_create(&jpg_thread, NULL, (void *) &jpg_check, (void *) path);
+			pthread_create(&png_thread, NULL, (void *) &png_check, (void *) path);
+			pthread_create(&bmp_thread, NULL, (void *) &bmp_check, (void *) path);
+			pthread_create(&gif_thread, NULL, (void *) &gif_check, (void *) path);
+
+			pthread_join(dir_thread, NULL);
+			pthread_join(jpg_thread, NULL);
+			pthread_join(png_thread, NULL);
+			pthread_join(bmp_thread, NULL);
+			pthread_join(gif_thread, NULL);
+
+			pthread_exit(0);
+		}
 
 
   /*******************************************************************************
@@ -668,7 +724,7 @@ void *bmp_file_check(const char* dir_path) {
 
     // Create output directory
     char *cur_dir = getcwd(NULL, 0);
-    char out_dir[1024];
+    char out_dir[512];
     strcpy(out_dir, cur_dir);
     strcat(out_dir, "/");
     strcat(out_dir, argv[3]);
@@ -679,7 +735,7 @@ void *bmp_file_check(const char* dir_path) {
     create_output_directory(argv[3]);
 
     // Create output log which is used for debuging
-    char output_log[1024];
+    char output_log[512];
     strcpy(output_log, out_dir);
     strcat(output_log, "/output.log");
     output = fopen(output_log, "w");
@@ -692,7 +748,7 @@ void *bmp_file_check(const char* dir_path) {
     fprintf(output, "Output.log is created.\n");
 
     // Create catalog.html
-    char catalog_html[1024];
+    char catalog_html[512];
     strcpy(catalog_html, out_dir);
     strcat(catalog_html, "/catalog.log");
     catalog = fopen(catalog_html, "a");
