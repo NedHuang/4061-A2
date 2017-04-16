@@ -338,8 +338,8 @@ void *v3_threads(const char* dir_path){
         pthread_t new_thread;
         // if the file is regular file:
         if(S_ISREG(file_stat.st_mode)) {
-          char ext = get_extension(filename);
-          if (strcmp(ext, "jpg") == 0){
+          // char ext = get_extension(filename);
+          if (strcmp(get_extension(filename), "jpg") == 0){
             pthread_mutex_lock(&outlog_lock);
             fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
             pthread_mutex_unlock(&outlog_lock);
@@ -357,7 +357,7 @@ void *v3_threads(const char* dir_path){
             // write infos about the img into the html.
             fprintf(html, " FileID: %llu FileName: %s FileType: jpg Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
             pthread_mutex_unlock(&html_lock);
-          } else if(strcmp(ext, "gif") == 0) {
+          } else if(strcmp(get_extension(filename), "gif") == 0) {
             pthread_mutex_lock(&outlog_lock);
             fprintf(output, "Filename:  %s, Type : gif, Location %s\n", filename, dir_path);
             pthread_mutex_unlock(&outlog_lock);
@@ -376,7 +376,7 @@ void *v3_threads(const char* dir_path){
             fprintf(html, " FileID: %llu FileName: %s FileType: gif Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
             pthread_mutex_unlock(&html_lock);
           }
-          else if (strcmp(ext, "bmp")==0) {
+          else if (strcmp(get_extension(filename), "bmp")==0) {
               pthread_mutex_lock(&outlog_lock);
               fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
               pthread_mutex_unlock(&outlog_lock);
@@ -394,7 +394,7 @@ void *v3_threads(const char* dir_path){
               // write infos about the img into the html.
               fprintf(html, " FileID: %llu FileName: %s FileType: bmp Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", file_stat.st_ino, dir_path_dirent->d_name, file_stat.st_size, time_output, thread_id);
               pthread_mutex_unlock(&html_lock);
-						} else if (strcmp(ext, "png") == 0) {
+						} else if (strcmp(get_extension(filename), "png") == 0) {
                 pthread_mutex_lock(&outlog_lock);
                 fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
                 pthread_mutex_unlock(&outlog_lock);
