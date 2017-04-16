@@ -732,7 +732,7 @@ void *splitthreads(const char* path) {
 			return 1;
 		}
 /*华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线
-                              create files and directory 
+                              create files and directory
 华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线华丽丽的分割线*/
     // Create output directory
     char *cur_dir = getcwd(NULL, 0);
@@ -782,13 +782,14 @@ void *splitthreads(const char* path) {
     char html_pwd[512];
     strcpy(html_pwd, out_dir);
     strcat(html_pwd, "/catalog.html");
-    html = fopen(catalog_log_pwd, "w");
+  
+    html = fopen(html_pwd, "w");
     if (NULL == html)
     {
-      fprintf(output, "Failed to open html file\n");
+      fprintf(html, "Failed to open html file\n");
       exit(1);
     }
-    fprintf(output, "html is created\n");
+    fprintf(html, "html is created\n");
 
     //html = fopen(html_pwd, "w");
     printf("html is created\n");
