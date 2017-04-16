@@ -81,8 +81,6 @@ void create_output_directory(const char *dirName) {
   }
   closedir(odir);
 }
-
-
 // function for v1
 
 void *v1_threads(const char* dir_path) {
@@ -130,7 +128,7 @@ void *v1_threads(const char* dir_path) {
           // test if the file is a regular file, check file types, write log and html files and update jpg_count;
             if(S_ISREG(file_stat.s_mode)) {
               char ext = get_extension(filename);
-              if (strcmp(ext, "jpg")){
+              if (strcmp(ext, "jpg") == 0){
                 pthread_mutex_lock(&outlog_lock);
   					    fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
   				      pthread_mutex_unlock(&outlog_lock);
@@ -149,15 +147,77 @@ void *v1_threads(const char* dir_path) {
                 fprintf(html, " FileID: %llu FileName: %s FileType: jpg Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, pDirent->d_name, s.st_size, time_output, id);
                 pthread_mutex_unlock(&html_lock);
               }
-
+              else if(strcmp(ext, "gif") == 0) {
+                pthread_mutex_lock(&outlog_lock);
+                fprintf(output, "Filename:  %s, Type : gif, Location %s\n", filename, dir_path);
+                pthread_mutex_unlock(&outlog_lock);
+                gif_count ++;
+                pthread_mutex_lock(&html_lock);
+                fprintf(html, <a href=\"../%s\">\n<img src=\"%s\" width=100 height =100></img></a><p align= \"left\">", filename, filename)
+                pthread_mutex_unlock(&html_lock);
+                // get the thread id
+                pthread_t thread_id = pthread_self();
+                // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
+                modification_time = localtime(&s.st_mtime);
+                // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
+                // char time_output[1024];
+                strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
+                // write infos about the img into the html.
+                fprintf(html, " FileID: %llu FileName: %s FileType: gif Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, pDirent->d_name, s.st_size, time_output, id);
+                pthread_mutex_unlock(&html_lock);
+              }
+              else if (strcmp(ext, "bmp") {
+                pthread_mutex_lock(&outlog_lock);
+                fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
+                pthread_mutex_unlock(&outlog_lock);
+                bmp_count ++;
+                pthread_mutex_lock(&html_lock);
+                fprintf(html, <a href=\"../%s\">\n<img src=\"%s\" width=100 height =100></img></a><p align= \"left\">", filename, filename)
+                pthread_mutex_unlock(&html_lock);
+                // get the thread id
+                pthread_t thread_id = pthread_self();
+                // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
+                modification_time = localtime(&s.st_mtime);
+                // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
+                // char time_output[1024];
+                strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
+                // write infos about the img into the html.
+                fprintf(html, " FileID: %llu FileName: %s FileType: bmp Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, pDirent->d_name, s.st_size, time_output, id);
+                pthread_mutex_unlock(&html_lock);
+              }
+              else if (strcmp(ext, "png") {
+                pthread_mutex_lock(&outlog_lock);
+                fprintf(output, "Filename:  %s, Type : jpg, Location %s\n", filename, dir_path);
+                pthread_mutex_unlock(&outlog_lock);
+                png_count ++;
+                pthread_mutex_lock(&html_lock);
+                fprintf(html, <a href=\"../%s\">\n<img src=\"%s\" width=100 height =100></img></a><p align= \"left\">", filename, filename)
+                pthread_mutex_unlock(&html_lock);
+                // get the thread id
+                pthread_t thread_id = pthread_self();
+                // get the time of data modification, http://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html
+                modification_time = localtime(&s.st_mtime);
+                // format the time  https://www.tutorialspoint.com/c_standard_library/time_h.htm
+                // char time_output[1024];
+                strftime (time_output, sizeof (time_output), "%Y %b %d %H:%M:%S", modification_time);
+                // write infos about the img into the html.
+                fprintf(html, " FileID: %llu FileName: %s FileType: png Size: %lld TimeofModification: %s ThreadID: %lu </p>\n", s.st_ino, pDirent->d_name, s.st_size, time_output, id);
+                pthread_mutex_unlock(&html_lock);
             }
+            else{
+              continue;
+            }
+          }else{
+            continue;
           }
         }
-
       }
     }
-
   }
+}
+
+void *v3_threads(const char* dir_path){
+  
 }
 
 
