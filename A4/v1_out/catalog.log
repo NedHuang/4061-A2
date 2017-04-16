@@ -1,0 +1,22 @@
+Time 	1 ms	#dirs	3	#files	1
+Time 	2 ms	#dirs	5	#files	6
+Time 	3 ms	#dirs	6	#files	6
+Time 	4 ms	#dirs	8	#files	13
+Time 	5 ms	#dirs	10	#files	16
+
+Programme initiation: 2017 Apr 16 CDT 17:42:35
+
+Number of jpg files = 8
+Number of png files = 4
+Number of bmp files = 8
+Number of gif files = 4
+
+Number of directories = 10
+Total number of valid image files = 24
+Total time of excecution = 6316704 ms
+-----------------------------------------------------
+Total number of threads created: 10
+
+End of Log for variant 1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+

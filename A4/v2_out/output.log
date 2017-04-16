@@ -1,0 +1,143 @@
+-------------------Varient_options: v2, Input_dir: /home/huan0754/Desktop/4061-A4/A4/dir0, Output_dir: out/ -------------------
+Output.log is created.
+Catalog.log is created
+========= Mutex Init =========
+
+html_lock created
+cata_lock created
+out_lock created
+
+============ Running v2 ============
+
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0, creating threads
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/2.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/1.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/4.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir1, creating threads
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/13.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3, creating threads
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+ finishedchecking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3, creating threads
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5, creating threads
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+ finishedDirectory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5, creating threads
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+ finishedDirectory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0, creating threads
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir2, creating threads
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/16.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/15.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7 found in
+	 /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4, creating threads
+Start checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/21.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+jpg file /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/20.jpg is found in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Finished checking jpg files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Finished checking   bmp files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Finished checking   png files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Finished checking gif files in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Checking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+ finishedChecking directories in /home/huan0754/Desktop/4061-A4/A4/dir0
+ finished
+html generated
+
+catalog generated
+
+Program finished with no Error.
