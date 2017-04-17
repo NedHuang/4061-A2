@@ -1,0 +1,28 @@
+﻿CSCI 4061 Spring 2017
+Jiatong Ruan
+Mingzhe Huang
+
+Compile and Run:
+>> make
+>> ./image_manager [variant_options] [absolute_path_to_input_dir] [output_dir]
+
+or you can change the [absolute_path_to_input_dir] inside makefile to the absolute path of the input directory inside the makefile. Then you can run
+>> make test1
+>> make test2
+>> make test3
+to test v1, v2, and v3.
+
+Result analysis:
+Variant 1 has the shortest run times and variant 2 has the most. 
+
+In v1, a thread will read a given directory and it will create a new thread whenever it find a sub-directory. This new thread will read the sub-directory.
+
+In v2, there will be 5 threads created for a given directory. 4 of them will scan for images in one type and the fifth will scan for sub-directory. When the fifth thread find a sub-directory, it will create 5 new threads to read that sub-directory.
+
+In v3, a list is made to store the absolute path for each sub-directory while read the input directory. After read all files(include sub-directories), a new thread will be created to read one sub-directory. Running v3 should be slower than running v1 because for each directory will be read twice. In the first time, total number of sub-directories will be counted and a list will be created. Then in the second time, file will be read. And finally the sub-directories stored will be handled.
+
+After each thread is created, it will be joined.
+
+In conclude, for a given input directory, v1 and v3 generates fewest threads and v2 generates most. Since v3 need to count and read the files twice, it should be slower than v1 but faster than v2. This is the result based on our test case. 
+
+However, we are not sure about if there are huge numbers of files inside each directory. Based on our result, we can assume that v3 runs slower than v1 but still faster than v2. 
