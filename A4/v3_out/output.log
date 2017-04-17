@@ -7,12 +7,12 @@ html_lock created
 cata_lock created
 out_lock created
 
-============ Running v3 ============
+------------------- Running v3 -------------------
 
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/2.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/1.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/3.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/3.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found 
@@ -20,18 +20,92 @@ Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/4.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/5.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/7.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/5.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/6.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/7.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/6.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/8.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/8.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/10.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
-Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/9.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/12.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/10.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/9.png, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/13.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/14.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/11.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/16.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/15.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/21.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/20.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/17.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/19.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/18.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/23.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9/4.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/22.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+
+html generated
+
+catalog generated
+
+Program finished with no Error.
+-------------------Varient_options: v3, Input_dir: /home/huan0754/Desktop/4061-A4/A4/dir0, Output_dir: out/ -------------------
+Output.log is created.
+Catalog.log is created
+========= Mutex Init =========
+
+html_lock created
+cata_lock created
+out_lock created
+
+------------------- Running v3 -------------------
+
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/2.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/1.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/3.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/7.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/6.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/8.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/4.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/5.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/14.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/16.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/15.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/10.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/9.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/12.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/13.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/11.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
@@ -39,30 +113,163 @@ Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6 found
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/14.png, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/21.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/20.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/19.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/17.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/18.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9/4.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/23.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/22.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+
+html generated
+
+catalog generated
+
+Program finished with no Error.
+-------------------Varient_options: v3, Input_dir: /home/huan0754/Desktop/4061-A4/A4/dir0, Output_dir: out/ -------------------
+Output.log is created.
+Catalog.log is created
+========= Mutex Init =========
+
+html_lock created
+cata_lock created
+out_lock created
+
+------------------- Running v3 -------------------
+
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/2.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/1.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/3.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/4.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/5.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/7.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/6.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/8.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/10.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/9.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/12.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/13.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/11.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/14.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/16.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/15.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/17.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/18.png, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/17.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/18.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
 Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9 found 
 	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/21.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
 Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/20.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/19.png, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
-Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/19.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
 Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/23.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9/4.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/23.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/22.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9/4.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
 
 html generated
-Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/22.bmp, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+
+catalog generated
+
+Program finished with no Error.
+-------------------Varient_options: v3, Input_dir: /home/huan0754/Desktop/4061-A4/A4/dir0, Output_dir: out/ -------------------
+Output.log is created.
+Catalog.log is created
+========= Mutex Init =========
+
+html_lock created
+cata_lock created
+out_lock created
+
+------------------- Running v3 -------------------
+
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/2.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/1.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/3.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/4.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/5.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/7.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/6.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/8.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/10.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/9.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/12.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/13.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/11.gif, Type : gif, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/14.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/16.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/15.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir6
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/21.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/20.jpg, Type : jpg, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7/19.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir2/dir4/dir7
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/17.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/18.png, Type : png, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Directory /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9 found 
+	 in /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Start processing in  directory: /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/23.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8/22.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir8
+Filename:  /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9/4.bmp, Type : bmp, Location /home/huan0754/Desktop/4061-A4/A4/dir0/dir1/dir3/dir5/dir9
+
+html generated
 
 catalog generated
 

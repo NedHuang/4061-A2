@@ -1,10 +1,35 @@
-Time 	1 ms	#dirs	3	#files	1
-Time 	2 ms	#dirs	5	#files	6
-Time 	3 ms	#dirs	6	#files	6
-Time 	4 ms	#dirs	8	#files	13
-Time 	5 ms	#dirs	10	#files	16
+Time 	1 ms	#dirs	2	#files	0
+Time 	2 ms	#dirs	2	#files	1
+Time 	3 ms	#dirs	3	#files	1
+Time 	4 ms	#dirs	3	#files	3
+Time 	5 ms	#dirs	4	#files	5
+Time 	6 ms	#dirs	5	#files	6
+Time 	7 ms	#dirs	5	#files	6
+Time 	8 ms	#dirs	6	#files	6
+Time 	9 ms	#dirs	6	#files	7
+Time 	10 ms	#dirs	6	#files	8
+Time 	11 ms	#dirs	6	#files	9
+Time 	12 ms	#dirs	7	#files	10
+Time 	13 ms	#dirs	7	#files	10
+Time 	14 ms	#dirs	7	#files	11
+Time 	15 ms	#dirs	7	#files	11
+Time 	16 ms	#dirs	7	#files	11
+Time 	17 ms	#dirs	7	#files	12
+Time 	18 ms	#dirs	7	#files	13
+Time 	19 ms	#dirs	8	#files	13
+Time 	20 ms	#dirs	9	#files	14
+Time 	21 ms	#dirs	9	#files	16
+Time 	22 ms	#dirs	10	#files	16
+Time 	23 ms	#dirs	10	#files	18
+Time 	24 ms	#dirs	10	#files	19
+Time 	25 ms	#dirs	10	#files	19
+Time 	26 ms	#dirs	10	#files	20
+Time 	27 ms	#dirs	10	#files	21
+Time 	28 ms	#dirs	10	#files	22
+Time 	29 ms	#dirs	10	#files	22
+Time 	30 ms	#dirs	10	#files	23
 
-Programme initiation: 2017 Apr 16 CDT 17:42:35
+Programme initiation: 2017 Apr 16 CDT 18:59:26
 
 Number of jpg files = 8
 Number of png files = 4
